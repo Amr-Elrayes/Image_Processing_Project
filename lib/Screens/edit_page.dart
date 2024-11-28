@@ -8,7 +8,7 @@ class PhotoPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Get screen height and width
+    // Get screen width
     final screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
@@ -16,35 +16,51 @@ class PhotoPage extends StatelessWidget {
         backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
         actions: [
-          Row(
-            children: [
-              IconButton(
-                onPressed: () {}, // Open image picker when tapped
-                icon: const ImageIcon(AssetImage("assets/brightness.png")),
-              ),
-              const SizedBox(width: 35),
-              IconButton(
-                onPressed: () {},
-                icon: const ImageIcon(AssetImage("assets/contrast.png")),
-              ),
-              const SizedBox(width: 35),
-              IconButton(
-                onPressed: () {},
-                icon: const ImageIcon(AssetImage("assets/crop.png")),
-              ),
-              const SizedBox(width: 35),
-              IconButton(
-                onPressed: () {},
-                icon: const ImageIcon(AssetImage("assets/refresh.png")),
-              ),
-              const SizedBox(width: 30),
-            ],
+          // Use a Row with spaceBetween to distribute icons evenly
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                IconButton(
+                  onPressed: () {}, // Open image picker when tapped
+                  icon: const ImageIcon(AssetImage("assets/brightness.png")),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const ImageIcon(AssetImage("assets/contrast.png")),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const ImageIcon(AssetImage("assets/crop.png")),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
+                ),
+              ],
+            ),
           ),
         ],
       ),
-      backgroundColor: Colors.black,
-      body: Column(
+      backgroundColor: Colors.white,
+      body:
+      
+      Column(
+        
         children: [
+          
           // Image section - uses Expanded to fill available space
           Expanded(
             flex: 3, // This will take 3/4 of the available screen height
@@ -60,7 +76,7 @@ class PhotoPage extends StatelessWidget {
             child: Container(
               width: screenWidth,
               color: Colors.white,
-              child: Center(
+              child: const Center(
                 child: Text(
                   'Edit Bars',
                   style: TextStyle(color: Colors.black),
