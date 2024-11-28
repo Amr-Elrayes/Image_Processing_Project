@@ -15,11 +15,11 @@ class PhotoPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
-        actions: [
-          // Use a Row with spaceBetween to distribute icons evenly
-          Expanded(
+        title: SingleChildScrollView(
+          scrollDirection: Axis.horizontal, // Make the icons scrollable
+          child: Padding(
+            padding: const EdgeInsets.only(top: 30),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 IconButton(
                   onPressed: () {}, // Open image picker when tapped
@@ -49,18 +49,51 @@ class PhotoPage extends StatelessWidget {
                   onPressed: () {},
                   icon: const ImageIcon(AssetImage("assets/refresh.png")),
                 ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
+                ),
+                // Add more icons if needed
               ],
             ),
           ),
-        ],
+        ),
       ),
       backgroundColor: Colors.white,
-      body:
-      
-      Column(
-        
+      body: Column(
         children: [
-          
           // Image section - uses Expanded to fill available space
           Expanded(
             flex: 3, // This will take 3/4 of the available screen height
