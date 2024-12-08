@@ -60,10 +60,39 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/brightness.png
-    - assets/contrast.png
+    - assets/Transform.png
+    - assets/Smoothing.png
+    - assets/Sharping.png
+    - assets/Segmentation.png
+    - assets/Restoration.png
+    - assets/Basic.png
+    - assets/rotate.png
     - assets/crop.png
-    - assets/refresh.png
+    - assets/resize.png
+    - assets/negative.png
+    - assets/Logarithm.png
+    - assets/Gamma.png
+    - assets/Contrast.png
+    - assets/Histogram.png
+    - assets/Mean.png
+    - assets/weighted.png
+    - assets/Gussian.png
+    - assets/Billateral.png
+    - assets/Max.png
+    - assets/Min.png
+    - assets/Median.png
+    - assets/Lablace.png
+    - assets/unsharp.png
+    - assets/2_level.png
+    - assets/3_level.png
+    - assets/otsu_threshold.png
+    - assets/otsu_multiple.png
+    - assets/Kmeans.png
+    - assets/arithmetic_mean.png
+    - assets/midpoint.png
+    - assets/Alpha.png
+    - assets/Adabtev_local.png
+    - assets/adaptive_median.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

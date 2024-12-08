@@ -1,5 +1,11 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:project/Screens/basic%20ops/basic.dart';
+import 'package:project/Screens/restoration/restoration.dart';
+import 'package:project/Screens/segmentation/segment.dart';
+import 'package:project/Screens/sharpening/sharp.dart';
+import 'package:project/Screens/smoothing/smooth.dart';
+import 'package:project/Screens/transforms/transform.dart';
 
 class PhotoPage extends StatelessWidget {
   final File imageFile;
@@ -15,80 +21,65 @@ class PhotoPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
-        title: SingleChildScrollView(
-          scrollDirection: Axis.horizontal, // Make the icons scrollable
-          child: Padding(
-            padding: const EdgeInsets.only(top: 30),
-            child: Row(
-              children: [
-                IconButton(
-                  onPressed: () {}, // Open image picker when tapped
-                  icon: const ImageIcon(AssetImage("assets/brightness.png")),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const ImageIcon(AssetImage("assets/contrast.png")),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const ImageIcon(AssetImage("assets/crop.png")),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const ImageIcon(AssetImage("assets/refresh.png")),
-                ),
-                // Add more icons if needed
-              ],
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            IconButton(
+              onPressed: () {
+                                  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) =>  Transforms(imageFile: imageFile)),
+  );
+              }, // Open image picker when tapped
+              icon: const ImageIcon(AssetImage("assets/Transform.png")),
             ),
-          ),
+            IconButton(
+              onPressed: () {
+            Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) =>  Smooth(imageFile: imageFile)),
+  );
+              },
+              icon: const ImageIcon(AssetImage("assets/Smoothing.png")),
+            ),
+            IconButton(
+              onPressed: () {
+            Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) =>  Sharp(imageFile: imageFile)),
+  );
+              },
+              icon: const ImageIcon(AssetImage("assets/Sharping.png")),
+            ),
+            IconButton(
+              onPressed: () {
+            Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) =>  Segmentationn(imageFile: imageFile)),
+  );
+              },
+              icon: const ImageIcon(AssetImage("assets/Segmentation.png")),
+            ),
+            IconButton(
+              onPressed: () {
+                            Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) =>  Restoration(imageFile: imageFile)),
+  );
+              },
+              icon: const ImageIcon(AssetImage("assets/Restoration.png")),
+            ),
+            IconButton(
+              onPressed: () {
+                  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) =>  Basic(imageFile: imageFile)),
+  );
+              },
+              icon: const ImageIcon(AssetImage("assets/Basic.png")),
+            ),
+            // Add more icons if needed
+          ],
         ),
       ),
       backgroundColor: Colors.white,
@@ -109,12 +100,6 @@ class PhotoPage extends StatelessWidget {
             child: Container(
               width: screenWidth,
               color: Colors.white,
-              child: const Center(
-                child: Text(
-                  'Edit Bars',
-                  style: TextStyle(color: Colors.black),
-                ),
-              ),
             ),
           ),
         ],
@@ -122,3 +107,7 @@ class PhotoPage extends StatelessWidget {
     );
   }
 }
+
+
+
+
